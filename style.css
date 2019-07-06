@@ -2,8 +2,8 @@
   display: inline-block;
 }
 .box {
-  width: 40px !important;
-  height: 35px !important;
+  width: 40px;
+  height: 35px;
   background: darkgoldenrod;
   cursor: pointer;
   transition: 0.8s;
@@ -12,17 +12,17 @@
   line-height: 100px;
 }
 .man {
-  background: skyblue !important;
+  background: skyblue;
   border-radius: 50%;
-  transform: rotate(360deg) scale(1.4);
+  transform: rotate(360deg) scale(1.2);
 }
 .woman {
-  background: pink !important;
+  background: pink;
   border-radius: 50%;
-  transform: rotate(360deg) scale(1.4);
+  transform: rotate(360deg) scale(1.2);
 }
 .dummy {
-  background: white !important;
+  background: white;
 }
 .btn-square-shadow-man {
   display: inline-block;
