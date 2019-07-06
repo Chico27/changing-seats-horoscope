@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script type="text/javascript" src="index.js"></script>
   </head>
   <style>
@@ -30,19 +31,11 @@
   </style>
   <body>
     <div>
-      <button type="button">男性の席</button>
-      <button type="button">女性の席</button>
-      <button type="button">リセット</button>
+      <button class="btn-square-shadow-man" type="button" onclick="setSheat('man')">男性の席</button>
+      <button class="btn-square-shadow-woman" type="button" onclick="setSheat('woman')">女性の席</button>
+      <button type="button" onclick="reset()">リセット</button>
     </div>
     <br>
-
-
-    <script type="text/javascript">
-
-    'use strict';
-
-
-    </script>
 
   </body>
 </html>

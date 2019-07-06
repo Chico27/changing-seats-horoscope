@@ -1,0 +1,59 @@
+.flex {
+  display: inline-block;
+}
+.box {
+  width: 20px;
+  height: 20px;
+  background: darkgoldenrod;
+  cursor: pointer;
+  transition: 0.8s;
+  margin: 0 20px 8px 0;
+  text-align: center;
+  line-height: 100px;
+}
+.man {
+  background: skyblue !important;
+  border-radius: 50%;
+  transform: rotate(360deg) scale(1.4);
+}
+.woman {
+  background: pink !important;
+  border-radius: 50%;
+  transform: rotate(360deg) scale(1.4);
+}
+.dummy {
+  background: white !important;
+}
+.btn-square-shadow-man {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #668ad8;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+}
+.btn-square-shadow-man:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+  border-bottom: none;
+}
+
+.btn-square-shadow-woman {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #FF99FF;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #FF66CC;
+  border-radius: 3px;
+}
+.btn-square-shadow-woman:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+  border-bottom: none;
+}

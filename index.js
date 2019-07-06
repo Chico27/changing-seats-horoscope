@@ -1,29 +1,59 @@
 const line = 6;
 const column = 6;
-const winner = Math.floor(Math.random() * line * column);
-console.log('winner:' +  winner);
+const maxSeats = 40;
+var limitCt = 0;
 window.onload = function() {
+  let k = 1;
   for (let i = 1; i <= line; i++) {
-    for (let j = 1; j <= line; j++) {
+    for (let j = 1; j <= column; j++) {
       const div = document.createElement('div');
+      div.id='seat_' + k;
       div.classList.add('box');
       div.classList.add('flex');
-      if (i*j == winner) {
-        div.dataset.result = 'win';
-      } else {
-        div.dataset.result = 'lose';
-      }
-      div.addEventListener('click', function(){
-        if (div.dataset.result == 'win') {
-          div.classList.add('win');
-        } else {
-          div.classList.add('lose');
-        }
-      })
-
       document.body.appendChild(div);
+      k++;
     }
     const div2 = document.createElement('div');
     document.body.appendChild(div2);
   }
+  const div = document.createElement('div');
+  div.classList.add('box');
+  div.classList.add('flex');
+  div.classList.add('dummy');
+  document.body.appendChild(div);
+
+  for (let i = 1; i < 5; i++) {
+    const div = document.createElement('div');
+    div.id='seat_' + k;
+    div.classList.add('box');
+    div.classList.add('flex');
+    document.body.appendChild(div);
+    k++;
+  }
 }
+
+var setSheat = function(clickedButton) {
+  let setCt = true;
+  while(setCt  && limitCt < maxSeats){
+    let seatCt = Math.floor(Math.random() * 40 + 1);
+    let attr = document.getElementById("seat_" + seatCt);
+    if (!attr.classList.contains('man') && !attr.classList.contains('woman')){
+      attr.classList.add(clickedButton);
+      setCt = false;
+      limitCt++;
+    }
+  }
+};
+
+var reset = function() {
+  for (let k = 1; k <= maxSeats; k++) {
+      var attr = document.getElementById("seat_" + k);
+      if (attr.classList.contains('man')){
+        attr.classList.remove('man');
+      }
+      if (attr.classList.contains('woman')){
+        attr.classList.remove('woman');
+      }
+  }
+  limitCt = 0;
+};
